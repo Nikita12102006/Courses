@@ -86,6 +86,10 @@ nav ul li a {
     transition: color 0.3s;
 }
         
+nav ul li a:hover {
+    color: var(--primary);
+}
+        
 .auth-buttons .btn {
     margin-left: 15px;
 }
@@ -157,13 +161,23 @@ h1 {
     background-color: var(--primary);
     color: white;
 }
-            
+        
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+        
 .btn-outline {
     background-color: transparent;
     border: 2px solid var(--primary);
     color: var(--primary);
 }
-
+        
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
         
 /* Секция курсов */
 .block_course {
@@ -205,6 +219,11 @@ h1 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
         
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+        
 .course-image {
     height: 160px;
     overflow: hidden;
@@ -215,6 +234,10 @@ h1 {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
+}
+        
+.course-card:hover .course-image img {
+    transform: scale(1.1);
 }
         
 .course-info {
@@ -301,6 +324,10 @@ footer {
     transition: color 0.3s;
 }
         
+.footer-column ul li a:hover {
+    color: white;
+}
+        
 .social-links {
     display: flex;
     gap: 15px;
@@ -316,6 +343,10 @@ footer {
     border-radius: 50%;
     color: white;
     transition: background-color 0.3s;
+}
+        
+.social-links a:hover {
+    background-color: var(--primary);
 }
         
 .footer-bottom {
@@ -363,4 +394,61 @@ footer {
     font-size: 1.1rem;
     margin-bottom: 30px;
     color: var(--gray);
+}
+        
+/* Адаптивность */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2rem;
+    }
+            
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+            
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+        
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+            
+    .mobile-menu {
+        display: block;
+    }
+            
+    .auth-buttons {
+        display: none;
+    }
+            
+    .course-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+        
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 0;
+    }
+            
+    h1 {
+        font-size: 1.8rem;
+    }
+            
+    .btn {
+        padding: 10px 20px;
+    }
+            
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+            
+    .course-card {
+        max-width: 100%;
+    }
 }
