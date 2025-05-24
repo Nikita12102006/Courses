@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эврика</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/st.css' %}">
+    <link rel="shortcut icon" href="logosite5.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="{% static 'main/img/logosite5.jpg' %}" alt="logo" class="logo1">
+                Эврика
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#hero1">Главная</a></li>
+                    <li><a href="#courses">Курсы</a></li>
+                    <li><a href="#Me">О нас</a></li>
+                    <li><a href="#kontact">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons">
+                <a href="{% url 'authorization' %}" class="btn btn-outline">Войти</a>
+                <a href="{% url 'registration' %}" class="btn btn-primary">Регистрация</a>
+            </div>
+
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero" id="hero1">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Развивайте навыки с лучшими онлайн-курсами</h1>
+                    <p>Получите доступ к курсам от экспертов в различных областях. Учитесь в удобном для вас темпе и достигайте своих целей.</p>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary">Перейти к курсам</a>
+                        <a href="#Me" class="btn btn-outline">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Студенты учатся онлайн">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция курсов -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Популярные курсы</h2>
+                <p>Выберите из нашей коллекции самых востребованных курсов</p>
+            </div>
+
+            <div class="course-grid">
+                <!-- Курс 1 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Веб-разработка">
+                    </div>
+                    <div class="course-info">
+                        <span class="course-category">Направление</span>
+                        <h3 class="course-title">Какой-то курс</h3>
+                        <div class="course-instructor">
+                            <img src="{% static 'main/img/logo_site.jpg' %}">
+                            <span>Эврика</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i></i></span>
+                            <span class="course-price">₽9.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Курс 2 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6586d4cc2a04ce1125cdc37b_6586d8103c349263cdf73a32/scale_1200">
+                    </div>
+                    <div class="course-info">
+                        <span class="course-category">Направление</span>
+                        <h3 class="course-title">Какой-то курс</h3>
+                        <div class="course-instructor">
+                            <img src="{% static 'main/img/logo_site.jpg' %}">
+                            <span>Эврика</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i></i></span>
+                            <span class="course-price">₽9.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Курс 3 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80">
+                    </div>
+                    <div class="course-info">
+                        <span class="course-category">Направление</span>
+                        <h3 class="course-title">Какой-то курс</h3>
+                        <div class="course-instructor">
+                            <img src="{% static 'main/img/logo_site.jpg' %}">
+                            <span>Эврика</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i></i></span>
+                            <span class="course-price">₽9.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Курс 4 -->
+                <a href="Курс4.html" class="block_course">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80">
+                    </div>
+                    <div class="course-info">
+                        <span class="course-category">Направление</span>
+                        <h3 class="course-title">Какой-то курс</h3>
+                        <div class="course-instructor">
+                            <img src="{% static 'main/img/logo_site.jpg' %}">
+                            <span>Эврика</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i></i></span>
+                            <span class="course-price">₽9.99</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="Me">
+    <div class="fon">
+        <div class="cont">
+            <h1 class="h2">Подробнее о нас</h1>
+            <p>Эврика — это современная онлайн-платформа, где вы можете приобрести качественные курсы и
+                обучаться в удобном для вас темпе. Мы не продаем "пустые" обещания — только проверенные материалы,
+                которые помогут вам освоить новые навыки или углубить существующие знания.
+            </p>
+            <h2>Наша миссия</h2>
+            <p>
+                Мы верим, что образование должно быть доступным, гибким и ориентированным на результат.
+                Наша цель — предоставить вам лучшие курсы от экспертов в своих областях, чтобы вы могли учиться без лишних сложностей.
+            </p>
+            <h2>Как это работает?</h2>
+            <nav class="nav1">
+                <li>Выбираете курс — в каталоге только актуальные программы с четкой программой.</li>
+                <li>Оплачиваете доступ — мгновенно получаете материалы после покупки.</li>
+                <li>Учитесь в своем ритме — все уроки доступны 24/7, без привязки к расписанию.</li>
+            </nav>
+        </div>
+    </div>
+    </section>
+
+    <!-- Подвал -->
+    <section id="kontact">
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Эврика</h3>
+                    <p>Онлайн-платформа для профессионального обучения и развития навыков.</p>
+                    <p class="lin">----------------------------------------------</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#Me">О нас</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: 8(904)397-42-49</li>
+                        <li>Email: sk637@yandex.ru</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Эврика. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    </section>
+</body>
+</html>
