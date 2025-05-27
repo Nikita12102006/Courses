@@ -1,0 +1,305 @@
+/* Базовые стили и сброс */
+html {
+    scroll-behavior: smooth; /* Плавная
+    прокрутка для всей страницы */
+}
+
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3a0ca3;
+    --secondary: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --success: #4cc9f0;
+}
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display';
+}
+        
+body {
+    background-color: #282626;
+    color: var(--light);
+    line-height: 1.6;
+}
+
+/* Основной блок */
+.div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* margin: 95px;
+    margin-left: 560px;
+    margin-right: 560px; */
+    margin: 95px auto; /* auto по бокам для центрирования */
+    max-width: calc(100% - 1120px - 40px); /* 560px * 2 + 20px * 2 */
+    padding: 0 20px;
+    background-color: black;
+    border-radius: 20px;
+    padding-bottom: 40px;
+}
+
+.img1 {
+    width: 80px;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.ots {
+    margin-top: 35px;
+}
+
+/* Поля эл.почты и пароль */
+/* --------------------------------------------------------------------------------- */
+input[type="email"],
+input[type="password"],
+input[type="double_password"] {
+  width: 90%; /* Ширина поля */
+  max-width: 400px; /* Максимальная ширина */
+  padding: 12px 16px; /* Внутренние отступы */
+  margin: 10px 0; /* Внешние отступы */
+  
+  /* Закругленные углы */
+  border-radius: 25px;
+  
+  /* Цвета */
+  background-color: #333; /* Темно-серый фон */
+  color: white; /* Белый цвет вводимого текста */
+  border: 2px solid #fff; /* Белая окантовка */
+  
+  /* Текст плейсхолдера */
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  
+  /* Плавные переходы */
+  transition: all 0.3s ease;
+}
+
+/* Стили для плейсхолдера (подсказки) */
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="double_password"]::placeholder {
+  color: #ccc; /* Светло-серый цвет текста подсказки */
+  opacity: 1; /* Для кроссбраузерности */
+}
+
+/* Стили при фокусе */
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="double_password"]:focus {
+  outline: none; /* Убираем стандартный outline */
+  border-color: #4CAF50; /* Зеленая окантовка при фокусе (можно изменить) */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Свечение */
+}
+
+/* Стили при наведении */
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="double_password"]:hover {
+  border-color: #ddd; /* Светлая окантовка при наведении */
+}
+/* --------------------------------------------------------------------------------- */
+
+/* Parol */
+.par {
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    padding-left: 20px;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+    align-self: flex-start; /* Выравниваем по левому краю контейнера */
+    margin-bottom: 45px;
+}
+
+.par:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Контейнер для полей ввода и ссылки */
+.input-container {
+    width: 100%; /* Такая же ширина, как у полей ввода */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    width: 90%;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    color: #ccc;
+}
+        
+.btn-outline:hover {
+    background-color: #ccc;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #ccc;
+    color: #333;
+}
+        
+.btn-primary:hover {
+    background-color:  #6f6666;
+    transform: translateY(-2px);
+}
+
+/* Медиа-запросы для адаптивности */
+/* Для экранов до 992px */
+@media (max-width: 992px) {
+    .div1 {
+        margin: 70px auto;
+        max-width: calc(100% - 400px);
+    }
+}
+
+/* Для экранов до 768px (планшеты) */
+@media (max-width: 768px) {
+    .div1 {
+        margin: 50px auto;
+        max-width: calc(100% - 200px);
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        max-width: 350px;
+    }
+    
+    .btn {
+        max-width: 350px;
+    }
+}
+
+/* Для экранов до 576px (большие мобильные) */
+@media (max-width: 576px) {
+    .div1 {
+        margin: 30px 20px;
+        max-width: calc(100% - 40px);
+        padding-bottom: 30px;
+    }
+    
+    .img1 {
+        width: 70px;
+        margin-top: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px 14px;
+        max-width: 100%;
+    }
+    
+    .btn {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    .par {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+}
+
+/* Для экранов до 480px (мобильные) */
+@media (max-width: 480px) {
+    .div1 {
+        margin: 20px 15px;
+        max-width: calc(100% - 30px);
+        border-radius: 15px;
+        padding-bottom: 25px;
+    }
+    
+    .img1 {
+        width: 60px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .btn {
+        font-size: 14px;
+    }
+    
+    .par {
+        font-size: 13px;
+        padding-left: 10px;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Адаптация под разные мониторы (сохраняя пропорции для 1920x1080) */
+
+/* 1. Мониторы БОЛЬШЕ, чем Full HD (2K, 4K, ультраширокие) */
+@media (min-width: 1921px) {
+    .div1 {
+        margin: 95px auto; /* Сохраняем оригинальные отступы */
+        max-width: 500px; /* Фиксируем ширину, чтобы форма не растягивалась */
+        transform: scale(1.1); /* Увеличиваем всю форму на 10% */
+        transform-origin: center; /* Масштабирование от центра */
+    }
+}
+
+/* 2. Ноутбуки с разрешением НИЖЕ Full HD (1366x768, 1600x900) */
+@media (max-width: 1919px) and (min-width: 1366px) {
+    .div1 {
+        margin: 70px auto;
+        max-width: 450px;
+    }
+    .img1 {
+        width: 70px; /* Чуть уменьшаем логотип */
+    }
+    h2 {
+        font-size: 1.5rem; /* Уменьшаем заголовок */
+    }
+}
+
+/* 3. Маленькие ноутбуки (до 1365px) */
+@media (max-width: 1365px) {
+    .div1 {
+        margin: 50px 20px; /* Уменьшаем отступы + делаем форму шире */
+        max-width: calc(100% - 40px); /* Занимаем почти всю ширину */
+    }
+    input[type="email"],
+    input[type="password"] {
+        max-width: 100%; /* Растягиваем поля ввода */
+    }
+    .btn {
+        max-width: 100%; /* Растягиваем кнопки */
+    }
+}

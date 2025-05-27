@@ -1,0 +1,38 @@
+/* Базовые стили и сброс */
+html {
+    scroll-behavior: smooth; /* Плавная
+    прокрутка для всей страницы */
+}
+
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3a0ca3;
+    --secondary: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --success: #4cc9f0;
+}
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display';
+}
+        
+body {
+    background-color: #282626;
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.donate-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #FFDB4D;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эврика</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="st2.css">
+    <link rel="shortcut icon" href="logosite5.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <button id="pay-button">Оплатить курс</button> -->
+    <!-- <a href="https://buy.stripe.com/test_prod_SN4ahZUeQa8sa8" class="button" id="pay-button">Оплатить курс</a>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+    const stripe = Stripe('pk_test_51RSJn2H1lxsPBSxxVyfNCAhmj2pP7fRVic9uOE4xrpRn8m03SvssglSukZ145jifyLPUhfXTo65xBRpmv5ebqeRt006f18nKfY'); // Замените на ваш публичный ключ
+  
+    document.getElementById('pay-button').addEventListener('click', async () => {
+        try {
+        // 1. Создаем сессию оплаты (это должен делать бэкенд, но для теста используем мок)
+        const mockSession = {
+            id: 'cs_test_mock_session_id',
+            url: 'https://checkout.stripe.com/pay/...' // Пример URL Stripe Checkout
+        };
+      
+        // 2. Перенаправляем на страницу оплаты Stripe
+        const result = await stripe.redirectToCheckout({
+            sessionId: mockSession.id
+        });
+      
+        if (result.error) {
+            alert(`Ошибка: ${result.error.message}`);
+        }
+        } catch (error) {
+        alert(`Ошибка: ${error.message}`);
+        }
+    });
+    </script>     -->
+
+    <a href="https://www.donationalerts.com/r/eureka_courses" class="donate-button">Оплатить курс</a>
+</body>
