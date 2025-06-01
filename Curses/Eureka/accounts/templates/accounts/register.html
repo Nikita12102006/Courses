@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'main/css/st1.css' %}">
+</head>
+<body>
+    <div class="div1">
+        <p><img src="{% static 'accounts/img/logosite6.jpg' %}" alt="логотип" class="img1"></p>
+        <h2>Регистрация</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-container">
+                {{ form.as_p }}
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline">Зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

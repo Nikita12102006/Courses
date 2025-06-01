@@ -1,0 +1,293 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+        /* Шапка */
+header {
+    background: linear-gradient(135deg, #30569f, #32302f);
+    color: white;
+    padding: 60px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #f9f5f0;
+    transform: skewY(-3deg);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #30569f;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* О курсе */
+.about-course {
+    padding: 80px 0;
+    position: relative;
+    z-index: 3;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #30569f;
+    font-size: 2.5rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Преимущества */
+.benefits {
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.benefit-card {
+    background-color: #f9f5f0;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    color: #30569f;
+    margin-bottom: 20px;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Программа */
+.program {
+    padding: 0;
+}
+
+.modules {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.module {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #30569f;
+}
+
+.module-title {
+    font-size: 1.3rem;
+    color: #30569f;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-duration {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: normal;
+}
+
+/* Преподаватель */
+.instructor {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.instructor-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.instructor-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.instructor-image:hover {
+    transform: scale(1.05);
+}
+
+.instructor-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.instructor-info {
+    flex: 1;
+}
+
+.instructor-name {
+    font-size: 2rem;
+    color: #30569f;
+    margin-bottom: 20px;
+}
+
+.instructor-bio {
+    margin-bottom: 20px;
+}
+
+.instructor-achievements {
+    list-style-type: none;
+}
+
+.instructor-achievements li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.instructor-achievements li::before {
+    content: '✓';
+    color: #30569f;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+        /* Футер */
+.fot {
+    background-color: #32302f;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.fot1 {
+    color: white;
+}
+
+.fot2 {
+    color: rgb(102, 97, 97);
+    padding-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-content, .instructor-content {
+        flex-direction: column;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
