@@ -1,0 +1,218 @@
+:root {
+    --primary: #6967e3;
+    --secondary: #ffa502;
+    --dark: #2f3542;
+    --light: #f1f2f6;
+    --success: #2ed573;
+}
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+        
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+     
+.p1 {
+    margin: 15px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+        
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+        
+.course-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+        
+.lessons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+        
+.lesson-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+        
+.lesson-header {
+    background: var(--dark);
+    color: white;
+    padding: 20px;
+}
+        
+.lesson-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+        
+.lesson-content {
+    padding: 20px;
+}
+        
+.step {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eee;
+}
+        
+.step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+        
+.step-title {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+        
+.step-title:before {
+    content: "✓";
+    display: inline-block;
+    background: var(--success);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+        
+.practice {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-left: 4px solid var(--primary);
+}
+        
+.practice-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+        
+.cta-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+      
+.d {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.img_kod {
+    width: 180px;
+    height: auto;
+    margin: 15px;
+}
+
+.cta-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+        
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    margin: 15px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(246, 114, 114, 0.3);
+}
+        
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+}
+
+        /* Футер */
+.fot {
+    background-color: #32302f;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.fot1 {
+    color: white;
+}
+
+.fot2 {
+    color: rgb(102, 97, 97);
+    padding-top: 20px;
+}
+        
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+        
+@media (max-width: 768px) {
+    .lessons-container {
+        grid-template-columns: 1fr;
+    }
+            
+    h1 {
+        font-size: 2rem;
+    }
+}
