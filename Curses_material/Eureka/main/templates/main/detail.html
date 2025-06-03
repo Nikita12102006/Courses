@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эврика</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/st4.css' %}">
+    <link rel="shortcut icon" href="logosite5.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ course.preview.title }}</h1>
+            <p class="course-description">{{ course.full_description }}</p>
+        </div>
+    </header>
+
+     <div class="container">
+    {% if lessons %}
+        {% for module_with_lessons in lessons %}
+            <h2>{{ module_with_lessons.module.title }}</h2>
+            {% for lesson_steps in module_with_lessons.lessons %}
+                <div class="lesson-card">
+                    <div class="lesson-header">
+                        <h2 class="lesson-title">{{ lesson_steps.lesson.title }}</h2>
+                    </div>
+                    <div class="lesson-content">
+                        {% for step in lesson_steps.steps %}
+                            <div class="step">
+                                <h3 class="step-title">{{ step.title }}</h3>
+                                {{ step.text }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                   <!-- Практика -->
+<!--                    <div class="practice">-->
+<!--                        <h4 class="practice-title">Практика</h4>-->
+<!--&lt;!&ndash;                        {% for practice in lesson.practices.all %}&ndash;&gt;-->
+<!--                            <p>{{ practice.description }}</p>-->
+<!--&lt;!&ndash;                        {% endfor %}&ndash;&gt;-->
+<!--                    </div>-->
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>Уроки пока отсутствуют.</p>
+    {% endif %}
+    <div class="d">
+            <!-- Итоги курса -->
+            <div class="cta-section">
+                <h2 class="cta-title">Итог курса</h2>
+                <p>{{ course.summary.summary_points|linebreaksbr }}</p>
+            </div>
+
+            <div class="cta-section">
+                <h2 class="cta-title">Что дальше?</h2>
+                <p>{{ course.next_steps.next_steps_text|linebreaksbr }}</p>
+                <a href="https://t.me/korotkov637" class="cta-button">Написать нам)</a>
+            </div>
+
+            <div class="cta-section">
+                <h2 class="cta-title">QR-код</h2>
+                <img src="{% static 'main/img/GR-код.jpg' %}" alt="тг_код" class="img_kod">
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+    <footer class="fot">
+        <p class="fot2">----------------------------------------------------</p>
+        <p class="fot1">&copy; 2025 Эврика. Все права защищены.</p>
+        <a href="Главная_страница.html" class="cta-button">На главную страницу</a>
+    </footer>
+</body>
+</html>
